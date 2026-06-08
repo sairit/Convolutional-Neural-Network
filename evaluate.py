@@ -6,6 +6,14 @@ import joblib
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+"""
+Notes: 
+loading a previously trained 1D CNN, preprocessing and normalizing the MIT-BIH ECG test dataset, 
+generating predictions for each heartbeat, evaluating classification performance using accuracy, 
+precision, recall, F1 score, and a confusion matrix, and visualizing the results with 
+performance metric and confusion matrix plots.
+"""
+
 # --- Load and preprocess test data ---
 test_df = pd.read_csv("Data/mitbih_test.csv", header=None)
 X_test = test_df.iloc[:, :-1].values.astype(np.float32)
