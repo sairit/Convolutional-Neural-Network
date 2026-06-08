@@ -1,6 +1,14 @@
 import numpy as np
 
+
 class CNN:
+    """
+        1D convolutional neural network for multiclass classification that uses a single valid Conv1D layer 
+        (stride 1, learnable filters and biases), ReLU activation, non-overlapping max pooling, flattening, 
+        one fully connected hidden layer with ReLU, a final dense softmax output layer, and end-to-end 
+        backpropagation with gradient clipping and gradient descent parameter updates.
+    """
+    
     def __init__(self, input_length, num_classes, conv_filters, kernel_size, pool_size, hidden_units):
         self.input_length = input_length
         self.num_classes = num_classes
