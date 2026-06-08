@@ -4,6 +4,13 @@ from model import CNN
 from sklearn.preprocessing import OneHotEncoder
 import joblib
 
+"""
+Notes:
+Loading and normalizing the MIT-BIH ECG training dataset, one-hot encoding heartbeat labels, 
+initializing a custom 1D CNN (Conv1D -> ReLU -> MaxPool -> Dense -> Softmax), training it 
+over multiple epochs using shuffled mini-batches, backpropagation, and gradient descent, 
+and then saving the trained model for later evaluation and inference.
+"""
 # --- Hyperparameters ---
 input_length = 187
 num_classes = 5
